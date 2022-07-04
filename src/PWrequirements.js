@@ -437,7 +437,9 @@
                     }, 500);
                 } else {
                     $("#PWreq").fadeIn(s.fadeTime);
-                    event.preventDefault();
+                    $("#PWreq-form").on("click", function (event) {
+                        event.preventDefault();
+                    });
                 }
             });
         });
