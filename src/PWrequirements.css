@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.PWreq-hint {
+  height: fit-content;
+  width: 350px;
+  box-shadow: 0 0 5px #ccc;
+  text-align: justify;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1000;
+  left: 10px;
+  float: right;
+  background-color: #fff;
+}
+.PWreq-hint .PWreq-inner .PWreq-Explanation {
+  background-color: #f8f8f8;
+  color: black;
+  padding: 15px;
+  border-start-start-radius: 15px;
+  border-start-end-radius: 15px;
+  border-bottom: solid #ccc 1px;
+}
+.PWreq-hint .PWreq-inner .PWreq-requirements ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+}
+.PWreq-hint .PWreq-inner .PWreq-requirements ul .PWreq-item {
+  margin-block: 10px;
+}
+.PWreq-hint .PWreq-inner .PWreq-requirements ul .PWreq-item.satisfied::before {
+  content: "";
+  display: inline-flex;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  background-color: forestgreen;
+  border: solid 4px forestgreen;
+  margin-right: 10px;
+}
+.PWreq-hint .PWreq-inner .PWreq-requirements ul .PWreq-item.surplus::before {
+  content: "";
+  display: inline-flex;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  background-color: #f14646;
+  border: solid 3px #f14646;
+  margin-right: 10px;
+}
+.PWreq-hint .PWreq-inner .PWreq-requirements ul .PWreq-item::before {
+  content: "";
+  display: inline-flex;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  background-color: transparent;
+  border: solid 4px lightgray;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=PWrequirements.css.map */
