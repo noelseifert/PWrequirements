@@ -196,7 +196,7 @@
                         return false;
                     } else if ($("#PWreq-PW").val().length < s.maxCharacter) {
                         $(`.PWreq-item.` + `${u.name}`).removeClass("surplus");
-                        return false;
+                        return true;
                     }
                 },
                 explainText: function () {
