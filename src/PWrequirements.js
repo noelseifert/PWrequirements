@@ -15,7 +15,7 @@
                                | |
                                |_|
 
- Version:       1.0.0
+ Version:       1.0.1
  Author:        Noel Seifert
  Website:       https://noelseifert.de
  Documentation: https://noelseifert.de/PWrequirements // yet to be created
