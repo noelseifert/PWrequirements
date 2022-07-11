@@ -2,6 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
     <title>NoSe Password requirements check</title>
     <link rel="stylesheet" type="text/css" href="/PWrequirements/src/PWrequirements.css">
     <style>
@@ -11,6 +13,13 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
+            margin: 0;
+        }
+        body.PW-darkmode {
+            background-color: #000;
+        }
+        body.PW-darkmode div, body.PW-darkmode p, body.PW-darkmode h1, body.PW-darkmode h2, body.PW-darkmode a {
+            color: #fff;
         }
         h1, h3, a {
             font-family: "Open Sans";
@@ -37,6 +46,9 @@
             font-size: 22px;
             line-height: 22px;
             padding-inline: 7px;
+            max-width: 400px;
+            width: 400px;
+            box-sizing: border-box;
         }
 
         button {
@@ -59,9 +71,10 @@
 <form id="PWreq-form" action="" method="post">
     <div style="width: fit-content">
         <label>Password</label><br/>
-        <input id="PWreq-PW" type="password" style="width: 400px">
+        <input id="PWreq-PW" type="password">
     </div>
     <button>Submit</button>
+    <button class="themeSwitch" onclick="$('body, #PWreq-form').toggleClass('PW-darkmode')">Theme-Switch</button>
 </form>
 
 <script type="text/javascript" src="/PWrequirements/src/PWrequirements.js"></script>
@@ -70,12 +83,12 @@
         $("input[type=password]").PWrequire({
             useLowercase: 5,
             useNumbers: 1,
-            useUppercase: 4,
             useSpecial: -1,
             minCharacter: 8,
-            maxCharacter: 0,
+            maxCharacter: 12,
             minCharacterDisplayType: "advanced",
-            lowercaseDisplayType: "advanced"
+            lowercaseDisplayType: "advanced",
+            style: "dark",
         });
     })
 </script>

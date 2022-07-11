@@ -48,7 +48,7 @@
             numbersDisplayType: "less",
             specialDisplayType: "less",
             reqExplain: true,               // display requirements explanation text (boolean)
-            //style: "light",               // display mode (light / dark) yet to be implemented
+            style: "light",                 // display mode (light / dark)
             fadeTime: 300                   // fade out time in milliseconds when requirements are satisfied
         };
 
@@ -85,6 +85,13 @@
                     `      </div>\n` +
                     `  </div>\n` +
                     `</div>`
+            }
+
+            if (s.style === "dark") {
+                $('body, #PWreq-form').addClass('PW-darkmode');
+            }
+            else {
+                $('body, #PWreq-form').removeClass('PW-darkmode');
             }
 
             // Append password hint

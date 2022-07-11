@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+#PWreq-form {
+  padding-inline: 15px;
+}
+
+@media (max-width: 815px) {
+  #PWreq-PW {
+    width: 100%;
+  }
+}
+
 .PWreq-hint {
   height: fit-content;
   width: 350px;
@@ -12,6 +22,15 @@
   left: 10px;
   float: right;
   background-color: #fff;
+}
+@media (max-width: 815px) {
+  .PWreq-hint {
+    float: none;
+    left: 0;
+    max-width: 350px;
+    width: 100%;
+    margin-block: 15px;
+  }
 }
 .PWreq-hint .PWreq-inner .PWreq-Explanation {
   background-color: #f8f8f8;
@@ -28,6 +47,8 @@
 }
 .PWreq-hint .PWreq-inner .PWreq-requirements ul .PWreq-item {
   margin-block: 10px;
+  display: flex;
+  text-align: start;
 }
 .PWreq-hint .PWreq-inner .PWreq-requirements ul .PWreq-item.satisfied::before {
   content: "";
@@ -58,6 +79,15 @@
   background-color: transparent;
   border: solid 4px lightgray;
   margin-right: 10px;
+}
+
+#PWreq-form.PW-darkmode .PWreq-hint {
+  background-color: #323232;
+  color: #fff;
+}
+#PWreq-form.PW-darkmode .PWreq-hint .PWreq-inner .PWreq-Explanation {
+  background-color: #1d1d1d;
+  color: #fff;
 }
 
 /*# sourceMappingURL=PWrequirements.css.map */
