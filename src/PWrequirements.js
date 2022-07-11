@@ -15,7 +15,7 @@
                                | |
                                |_|
 
- Version:       1.0.1
+ Version:       1.0.2
  Author:        Noel Seifert
  Website:       https://noelseifert.de
  Documentation: https://noelseifert.de/PWrequirements // yet to be created
@@ -61,14 +61,18 @@
             if (s.maxCharacter > 0) {
                 if (s.maxCharacter <= Math.abs(s.useLowercase) + Math.abs(s.useUppercase) + Math.abs(s.useNumbers) + Math.abs(s.useSpecial))
                 {
-                    console.error("The set maximal character amount is lower or equal to required settings. | Logic error / user unfriendly")
+                    console.error("The set maximal character length is lower or equal to requirements. | Logic error / user unfriendly")
                     return;
                 }
                 else if (s.maxCharacter < Math.abs(s.minCharacter))
                 {
-                    console.error("The set maximal character amount is lower than the minimal password length. | Logic error")
+                    console.error("The set maximal character length is lower than the minimal password length. | Logic error")
                     return;
                 }
+            }
+            if (s.minCharacter < Math.abs(s.useLowercase) + Math.abs(s.useUppercase) + Math.abs(s.useNumbers) + Math.abs(s.useSpecial)) {
+                console.error("The set minimal character length is lower than the minimal requirements. | Logic error");
+                return;
             }
 
             if (s.reqExplain) {
