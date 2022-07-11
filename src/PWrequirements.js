@@ -59,8 +59,16 @@
 
             // excluding possible misconfiguration to avoid fatal errors
             if (s.maxCharacter > 0) {
-                if (s.maxCharacter <= Math.abs(s.useLowercase) + Math.abs(s.useUppercase) + Math.abs(s.useNumbers) + Math.abs(s.useSpecial)) return;
-                else if (s.maxCharacter < Math.abs(s.minCharacter)) return;
+                if (s.maxCharacter <= Math.abs(s.useLowercase) + Math.abs(s.useUppercase) + Math.abs(s.useNumbers) + Math.abs(s.useSpecial))
+                {
+                    console.error("The set maximal character amount is lower or equal to required settings. | Logic error / user unfriendly")
+                    return;
+                }
+                else if (s.maxCharacter < Math.abs(s.minCharacter))
+                {
+                    console.error("The set maximal character amount is lower than the minimal password length. | Logic error")
+                    return;
+                }
             }
 
             if (s.reqExplain) {
