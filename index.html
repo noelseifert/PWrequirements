@@ -81,14 +81,15 @@
 <script type="text/javascript">
     $(function () {
         $("input[type=password]").PWrequire({
-            useLowercase: 5,
+            useLowercase: 3,
+            useUppercase: 2,
             useNumbers: 1,
             useSpecial: -1,
             minCharacter: 8,
-            maxCharacter: 12,
-            minCharacterDisplayType: "advanced",
+            maxCharacter: -1,
+            minCharacterDisplayType: "less",
             lowercaseDisplayType: "advanced",
-            style: "dark",
+            uppercaseDisplayType: "advanced",
         });
     })
 </script>
