@@ -15,7 +15,7 @@
                                | |
                                |_|
 
- Version:       1.0.0
+ Version:       1.0.1
  Author:        Noel Seifert
  Website:       https://noelseifert.de
  Documentation: https://noelseifert.de/PWrequirements // yet to be created
@@ -48,7 +48,7 @@
             numbersDisplayType: "less",
             specialDisplayType: "less",
             reqExplain: true,               // display requirements explanation text (boolean)
-            //style: "light",               // display mode (light / dark) yet to be implemented
+            style: "light",                 // display mode (light / dark)
             fadeTime: 300                   // fade out time in milliseconds when requirements are satisfied
         };
 
@@ -63,16 +63,36 @@
                 else if (s.maxCharacter < Math.abs(s.minCharacter)) return;
             }
 
-            var pwHint =
-                `<div id="PWreq" class="PWreq-hint">\n` +
-                `  <div class="PWreq-inner">\n` +
-                `      <div class="PWreq-Explanation"><p class="characters"></p><p class="others"></p></div>\n` +
-                `      <div class="PWreq-requirements">\n` +
-                `          <ul class="PWreq-checklist">\n` +
-                `          </ul>\n` +
-                `      </div>\n` +
-                `  </div>\n` +
-                `</div>`
+            if (s.reqExplain) {
+                var pwHint =
+                    `<div id="PWreq" class="PWreq-hint">\n` +
+                    `  <div class="PWreq-inner">\n` +
+                    `      <div class="PWreq-Explanation"><p class="characters"></p><p class="others"></p></div>\n` +
+                    `      <div class="PWreq-requirements">\n` +
+                    `          <ul class="PWreq-checklist">\n` +
+                    `          </ul>\n` +
+                    `      </div>\n` +
+                    `  </div>\n` +
+                    `</div>`
+            }
+            else {
+                var pwHint =
+                    `<div id="PWreq" class="PWreq-hint">\n` +
+                    `  <div class="PWreq-inner">\n` +
+                    `      <div class="PWreq-requirements">\n` +
+                    `          <ul class="PWreq-checklist">\n` +
+                    `          </ul>\n` +
+                    `      </div>\n` +
+                    `  </div>\n` +
+                    `</div>`
+            }
+
+            if (s.style === "dark") {
+                $('body, #PWreq-form').addClass('PW-darkmode');
+            }
+            else {
+                $('body, #PWreq-form').removeClass('PW-darkmode');
+            }
 
             // Append password hint
             $(this).parent().append(pwHint);
