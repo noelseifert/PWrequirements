@@ -233,7 +233,7 @@
                 },
                 explainText: function () {
                     if (s.useLowercase > 0) {
-                        return `mindestens ${s.useLowercase} Kleinbuchstaben`;
+                        return `Kleinbuchstaben: mindestens ${s.useLowercase}`;
                     } else if (s.useLowercase < 0) {
                         return `Kleinbuchstaben`;
                     }
@@ -243,14 +243,14 @@
                 },
                 lessText: function () {
                     if (s.useLowercase > 0) {
-                        return `mindestens ${s.useLowercase} Kleinbuchstaben`;
+                        return `Kleinbuchstaben: mindestens ${s.useLowercase}`;
                     } else if (s.useLowercase < 0) {
                         return `Kleinbuchstaben`;
                     }
                 },
                 advancedText: function () {
                     if (s.useLowercase > 0) {
-                        return `mindestens ${($("#PWreq-PW").val().match(/[a-z]/g) || []).length} / ${s.useLowercase} Kleinbuchstaben`;
+                        return `Kleinbuchstaben: mindestens ${($("#PWreq-PW").val().match(/[a-z]/g) || []).length} / ${s.useLowercase}`;
                     } else if (s.useLowercase < 0) {
                         return `Kleinbuchstaben`;
                     }
@@ -269,7 +269,7 @@
                 },
                 explainText: function () {
                     if (s.useUppercase > 0) {
-                        return `mindestens ${s.useUppercase} Großbuchstaben`;
+                        return `Großbuchstaben: mindestens ${s.useUppercase}`;
                     } else if (s.useUppercase < 0) {
                         return `Großbuchstaben`;
                     }
@@ -279,14 +279,14 @@
                 },
                 lessText: function () {
                     if (s.useUppercase > 0) {
-                        return `mindestens ${s.useUppercase} Großbuchstaben`;
+                        return `Großbuchstaben: mindestens ${s.useUppercase}`;
                     } else if (s.useUppercase < 0) {
                         return `Großbuchstaben`;
                     }
                 },
                 advancedText: function () {
                     if (s.useUppercase > 0) {
-                        return `mindestens ${($("#PWreq-PW").val().match(/[A-Z]/g) || []).length} / ${s.useUppercase} Großbuchstaben`;
+                        return `Großbuchstaben: mindestens ${($("#PWreq-PW").val().match(/[A-Z]/g) || []).length} / ${s.useUppercase}`;
                     } else if (s.useUppercase < 0) {
                         return `Großbuchstaben`;
                     }
@@ -305,7 +305,7 @@
                 },
                 explainText: function () {
                     if (s.useNumbers > 0) {
-                        return `mindestens ${s.useNumbers} Ziffern`;
+                        return `Ziffern: mindestens ${s.useNumbers}`;
                     } else if (s.useNumbers < 0) {
                         return `Ziffern`;
                     }
@@ -315,14 +315,14 @@
                 },
                 lessText: function () {
                     if (s.useNumbers > 0) {
-                        return `mindestens ${s.useNumbers} Ziffern`;
+                        return `Ziffern: mindestens ${s.useNumbers}`;
                     } else if (s.useNumbers < 0) {
                         return `<li class="PWreq-item ${this.name}">Ziffern</li>`;
                     }
                 },
                 advancedText: function () {
                     if (s.useNumbers > 0) {
-                        return `mindestens ${($("#PWreq-PW").val().match(/[0-9]/g) || []).length} / ${s.useNumbers} Ziffern`;
+                        return `Ziffern: mindestens ${($("#PWreq-PW").val().match(/[0-9]/g) || []).length} / ${s.useNumbers}`;
                     } else if (s.useNumbers < 0) {
                         return `Ziffern`;
                     }
@@ -341,7 +341,7 @@
                 },
                 explainText: function () {
                     if (s.useSpecial > 0) {
-                        return `mindestens ${s.useSpecial} Sonderzeichen`;
+                        return `Sonderzeichen: mindestens ${s.useSpecial}`;
                     } else if (s.useSpecial < 0) {
                         return `Sonderzeichen`;
                     }
@@ -351,14 +351,14 @@
                 },
                 lessText: function () {
                     if (s.useSpecial > 0) {
-                        return `mindestens ${s.useSpecial} Sonderzeichen`;
+                        return `Sonderzeichen: mindestens ${s.useSpecial}`;
                     } else if (s.useSpecial < 0) {
                         return `Sonderzeichen`;
                     }
                 },
                 advancedText: function () {
                     if (s.useSpecial > 0) {
-                        return `mindestens ${($("#PWreq-PW").val().match(/[+\-*?^$.[\]{}()|/=!°:§%&<>~€@,#]/g) || []).length} / ${s.useSpecial} Sonderzeichen`;
+                        return `Sonderzeichen: mindestens ${($("#PWreq-PW").val().match(/[+\-*?^$.[\]{}()|/=!°:§%&<>~€@,#]/g) || []).length} / ${s.useSpecial}`;
                     } else if (s.useSpecial < 0) {
                         return `Sonderzeichen`;
                     }
