@@ -63,16 +63,29 @@
                 else if (s.maxCharacter < Math.abs(s.minCharacter)) return;
             }
 
-            var pwHint =
-                `<div id="PWreq" class="PWreq-hint">\n` +
-                `  <div class="PWreq-inner">\n` +
-                `      <div class="PWreq-Explanation"><p class="characters"></p><p class="others"></p></div>\n` +
-                `      <div class="PWreq-requirements">\n` +
-                `          <ul class="PWreq-checklist">\n` +
-                `          </ul>\n` +
-                `      </div>\n` +
-                `  </div>\n` +
-                `</div>`
+            if (s.reqExplain) {
+                var pwHint =
+                    `<div id="PWreq" class="PWreq-hint">\n` +
+                    `  <div class="PWreq-inner">\n` +
+                    `      <div class="PWreq-Explanation"><p class="characters"></p><p class="others"></p></div>\n` +
+                    `      <div class="PWreq-requirements">\n` +
+                    `          <ul class="PWreq-checklist">\n` +
+                    `          </ul>\n` +
+                    `      </div>\n` +
+                    `  </div>\n` +
+                    `</div>`
+            }
+            else {
+                var pwHint =
+                    `<div id="PWreq" class="PWreq-hint">\n` +
+                    `  <div class="PWreq-inner">\n` +
+                    `      <div class="PWreq-requirements">\n` +
+                    `          <ul class="PWreq-checklist">\n` +
+                    `          </ul>\n` +
+                    `      </div>\n` +
+                    `  </div>\n` +
+                    `</div>`
+            }
 
             // Append password hint
             $(this).parent().append(pwHint);
