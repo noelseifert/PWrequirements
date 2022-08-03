@@ -15,7 +15,7 @@
                                | |
                                |_|
 
- Version:       1.0.2
+ Version:       1.0.4
  Author:        Noel Seifert
  Website:       https://noelseifert.de
  Documentation: https://noelseifert.de/PWrequirements // yet to be created
@@ -237,7 +237,7 @@
                 },
                 explainText: function () {
                     if (s.useLowercase > 0) {
-                        return `Kleinbuchstaben: mindestens ${s.useLowercase}`;
+                        return `mindestens ${s.useLowercase} Kleinbuchstaben`;
                     } else if (s.useLowercase < 0) {
                         return `Kleinbuchstaben`;
                     }
@@ -273,7 +273,7 @@
                 },
                 explainText: function () {
                     if (s.useUppercase > 0) {
-                        return `Großbuchstaben: mindestens ${s.useUppercase}`;
+                        return `mindestens ${s.useUppercase} Großbuchstaben`;
                     } else if (s.useUppercase < 0) {
                         return `Großbuchstaben`;
                     }
@@ -309,7 +309,7 @@
                 },
                 explainText: function () {
                     if (s.useNumbers > 0) {
-                        return `Ziffern: mindestens ${s.useNumbers}`;
+                        return `mindestens ${s.useNumbers} Ziffern`;
                     } else if (s.useNumbers < 0) {
                         return `Ziffern`;
                     }
@@ -345,7 +345,7 @@
                 },
                 explainText: function () {
                     if (s.useSpecial > 0) {
-                        return `Sonderzeichen: mindestens ${s.useSpecial}`;
+                        return `mindestens ${s.useSpecial} Sonderzeichen`;
                     } else if (s.useSpecial < 0) {
                         return `Sonderzeichen`;
                     }
